@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pameran - Galeri Seni Nusantara</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Galeri Seni Nusantara</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="pameran.html">Pameran</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="seniman.html">Seniman</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontak.html">Kontak</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tentang.html">Tentang Kami</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="container mt-4 pt-5">
+    <h2 class="section-title">Koleksi Pameran Kami</h2>
+    <p class="lead text-center mb-4">
+      Jelajahi berbagai karya seni pilihan dari koleksi kami yang beragam, mewakili kekayaan seni Nusantara.
+    </p>
+    <div class="text-center my-4">
+      <button class="btn btn-outline-primary-custom filter-btn active" data-filter="all">Semua</button>
+      <button class="btn btn-outline-primary-custom filter-btn" data-filter="lukisan">Lukisan</button>
+      <button class="btn btn-outline-primary-custom filter-btn" data-filter="patung">Patung/Ukiran</button>
+      <button class="btn btn-outline-primary-custom filter-btn" data-filter="tenun">Tenun/Tekstil</button>
+      <button class="btn btn-outline-primary-custom filter-btn" data-filter="kriya">Kriya</button>
+      <button class="btn btn-outline-primary-custom filter-btn" data-filter="pameran-utama">Pameran Utama</button>
+    </div>
+    <div id="top-of-page-collection" style="height: 1px; visibility: hidden;"></div>
+    <div class="row" id="art-gallery">
+      <div class="col-md-4 mb-4" data-category="pameran-utama">
+        <div class="card product-card h-100">
+          <img src="img/global/beyoundImagination.jpg" class="card-img-top" alt="Pameran Seni Kontemporer Nusantara">
+          <div class="card-body">
+            <h5 class="card-title">Pameran Besar Seni Rupa Kontemporer Indonesia 2025 “BEYOND IMAGINATION”</h5>
+            <p class="card-text">Komunitas Indonesian Artists resmi menggelar Contemporary Art Exhibition bertajuk “Beyond Imagination”</p>
+            <div class="hover-info">
+              <p><strong>Tanggal:</strong> 3 - 31 Mei 2025</p>
+              <p><strong>Lokasi:</strong> Lantai 5, Gedung Jakarta Design Centre (JDC), Jl. Gatot Subroto No.5 Petamburan, Kecamatan Tanah Abang, Kota Jakarta Pusat.</p>
+              <a href="#detail-pameran-kontemporer-section" class="btn btn-sm btn-primary-custom smooth-scroll-btn">
+                Lihat Detail Pameran
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-category="lukisan">
+        <div class="card product-card h-100">
+          <img src="img/koleksi/luk_Badai-Pasti-Berlalu-Affandi.jpg" class="card-img-top" alt="Lukisan Raja Ampat" />
+          <div class="card-body">
+            <h5 class="card-title">Badai Pasti Berlalu</h5>
+            <p class="card-text">Karya: Affandi</p>
+            <div class="hover-info">
+              <p><strong>Deskripsi:</strong> Tahun Pembuatan : 1971
+              Ukuran : 137cm X 92cm
+              Media : Oil on Canvas</p>
+              <a href="#detail-badai-pasti-berlalu" class="btn btn-sm btn-primary-custom smooth-scroll-btn">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-category="tenun">
+        <div class="card product-card h-100">
+          <img src="img/koleksi/tenunEndekSutraMastuli.jpg" class="card-img-top" alt="Tenun Endek Sutra Mastuli" />
+          <div class="card-body">
+            <h5 class="card-title">Tenun Endek Sutra Mastuli</h5>
+            <p class="card-text">Karya: Putu  Rika Mahardika</p>
+            <div class="hover-info">
+              <p><strong>Deskripsi:</strong>
+              (Tenun Endek Sutra Mastuli)
+              Kain tenun asli Desa Kalianget, Kec. Seririt, Kab. Buleleng, Bali.
+              Ukuran : 2.2m X 1.1m</p>
+              <a href="#detail-tenun-endek-sutra-mastuli" class="btn btn-sm btn-primary-custom smooth-scroll-btn">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-category="patung">
+        <div class="card product-card h-100">
+          <img src="img/koleksi/seniPatung_Asmat.jpg" class="card-img-top" alt="Patung Ukir Asmat" />
+          <div class="card-body">
+            <h5 class="card-title">Jiwa Ukiran Asmat</h5>
+            <p class="card-text">Karya: Yohanes Pame</p>
+            <div class="hover-info">
+              <p><strong>Deskripsi:</strong> Patung ukiran kayu khas suku Asmat, Papua, melambangkan leluhur dan
+                kekuatan alam. Tinggi 70 cm.</p>
+              <a href="#detail-ukiran-asmat" class="btn btn-sm btn-primary-custom smooth-scroll-btn">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-category="lukisan">
+        <div class="card product-card h-100">
+          <img src="img/koleksi/luk_Berburu-Rusa-karya-Raden-Saleh.jpg" class="card-img-top" alt="Lukisan Berburu Rusa" />
+          <div class="card-body">
+            <h5 class="card-title">Berburu Rusa</h5>
+            <p class="card-text">Karya: Raden Saleh</p>
+            <div class="hover-info">
+              <p><strong>Deskripsi:</strong>  Tahun Pembuatan : 1971
+              Ukuran : 110cm X 180cm
+              Media : Oil on Canvas
+              </p>
+              <a href="#detail-lukisan-Berburu-Rusa-Raden-Saleh" class="btn btn-sm btn-primary-custom smooth-scroll-btn">Lihat
+                Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-category="kriya">
+        <div class="card product-card h-100">
+          <img src="img/koleksi/wayangArjuna.jpg" class="card-img-top" alt="Wayang Kulit" />
+          <div class="card-body">
+            <h5 class="card-title">Kharisma Wayang Arjuna</h5>
+            <p class="card-text">Karya: Dalang Agung</p>
+            <div class="hover-info">
+              <p><strong>Deskripsi:</strong> Wayang kulit Arjuna, dibuat dengan teknik tradisional, detail ukiran dan
+                pewarnaan yang halus. Tinggi 80 cm.</p>
+              <a href="#detail-wayang-arjuna" class="btn btn-sm btn-primary-custom smooth-scroll-btn">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-category="kriya">
+        <div class="card product-card h-100">
+          <img src="img/koleksi/topengSidakarya.jpg" class="card-img-top" alt="Topeng Bali" />
+          <div class="card-body">
+            <h5 class="card-title">Misteri Topeng Sidakarya</h5>
+            <p class="card-text">Karya: I Nyoman Kerta</p>
+            <div class="hover-info">
+              <p><strong>Deskripsi:</strong> Topeng ukiran kayu khas Bali, digunakan dalam upacara keagamaan, penuh
+                dengan detail artistik. Tinggi 30 cm.</p>
+              <a href="#detail-topeng-sidakarya" class="btn btn-sm btn-primary-custom smooth-scroll-btn">Lihat
+                Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-category="kriya">
+        <div class="card product-card h-100">
+          <img src="img/koleksi/gerabah_Kriya.jpg" class="card-img-top" alt="Gerabah Tanah Liat Kuno" />
+          <div class="card-body">
+            <h5 class="card-title">Gerabah Tanah Liat Kuno</h5>
+            <p class="card-text">Karya: Pengrajin Anonim</p>
+            <div class="hover-info">
+              <p><strong>Deskripsi:</strong> Replika gerabah kuno dari situs arkeologi, dibuat dengan teknik tradisional
+                untuk melestarikan warisan budaya. Diameter 25 cm.</p>
+              <a href="#detail-gerabah-kuno" class="btn btn-sm btn-primary-custom smooth-scroll-btn">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-category="patung">
+        <div class="card product-card h-100">
+          <img src="img/koleksi/nagaSangaAmurwabhumi.jpg" class="card-img-top" alt="Ukiran Naga Emas" />
+          <div class="card-body">
+            <h5 class="card-title">Patung Naga Sanga Amurwabhumi</h5>
+            <p class="card-text">Karya: I Nyoman Eriawan</p>
+            <div class="hover-info">
+              <p><strong>Deskripsi:</strong> Mahakarya berupa patung naga yang terbuat dari perak dengan ukuran panjang 20 meter, lebar 180 cm dan tinggi 135 cm yang memerlukan 720 kg perak. Dikerjakan selama 5 tahun 6 bulan, patung perak merupakan gagasan I Nyoman Eriawan bersama para seniman dari Kecamatan Tegalalang Kabupaten Gianyar.</p>
+              <a href="#detail-naga-sanga-amurwabhumi" class="btn btn-sm btn-primary-custom smooth-scroll-btn">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="section-title mt-5">Detail Pameran & Koleksi</h2>
+    <section id="detail-pameran-kontemporer-section" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/global/beyoundImagination.jpg" class="img-fluid rounded"
+            alt="Gambar Pameran Seni Kontemporer Nusantara">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Pameran Besar Seni Rupa Kontemporer Indonesia 2025 “BEYOND IMAGINATION”</h3>
+          <p class="text-muted"><strong>Tanggal:</strong> 3 - 31 Mei 2025</p>
+          <p class="text-muted"><strong>Lokasi:</strong>  Lantai 5, Gedung Jakarta Design Centre (JDC), Jl. Gatot Subroto No.5 Petamburan, Kecamatan Tanah Abang, Kota Jakarta Pusat.</p>
+          <hr>
+          <p class="text-secondary">Indonesian Artists menggelar pameran Contemporary Art Exhibition bertajuk "Beyond Imagination" di di Gedung Jakarta Design Center (JDC). Sebanyak 56 seniman yang tergabung dalam Indonesian Artists berpartisipasi dalam pameran seni rupa kontemporer tersebut.</p>
+          <p>"Beyond Imagination" memiliki makna tentang sebuah karya yang melampaui sebuah imajinasi dan dapat di ekspresikan di dalam berbagai konsep, gaya dan teknik seni rupa. lA (Indonesian Artist) adalah komunitas perupa yang anggotanya tersebar dan tinggal di wilayah kepulauan negara Republk Indonesia. Ada yang tinggal di Jawa, Madura, Bali, Kalimantan, Sumatra, Sulawesi, Aceh dan propinsi lainnya, Mereka adalah para perupa yang aktif berkarya dan jumlahnya lebih dari 500 anggota. Mereka memiliki spirit bersama untuk majukan seni rupa Indonesia. Karya yang dipamerkan saat ini ada beberapa jenis seperi lukisan, patung, seni instalasi dan karya mix media lainnya. Harapan dari pameran ini adalah agar apresiasi seni rupa dapat tumbuh berkembang diwilayah dimana tempat para perupa berasai di seluruh Indonesia.
+          Pameran karya seni rupa bertajuk Beyond Imagination dapat dikunjungi secara gratis yang berlangsung mulai 3 Mei hingga 31 Mei 2025 mendatang.</p>
+          <p class="text-secondary"><strong>Kurator:</strong> Mas Heri Kris</p>
+          <p class="text-secondary"><strong>Seniman Terlibat:</strong> Afit Ruseno, Agung WHS, Agus Pisaro Wid, Agus Wicaksono, Agus Widiyanto, Ali Aspandi, Annie Sofyan, Ary Pudyanti, Ayu Sasmitha, Biola Hitam, Chryshnanda DL, D. Koestrita, Deskamtoro Dwi Utomo, Dharmawan Budhut, Dodik Hartono, Dwi Ariyanto, Febrita, Feri Susilo, H. M. Riyanto, Hendra Prast, Heri Heriyana, Irwan Somantri, M. Solech, Medi PS, Meistoria Ve, Melly Kemala, Mintosari, Moya Kamaruddin, Nengah Kisid,  Ni Made Sri Andani, Niken Indira, Nur Idris, Qohar, Rohmad  Taufiq, Rokhmat Rizal, Ruslan, Samsul Arifin, Semi K Swara, Sigit Purnomo, Sulardi Wiyana, Sutrisno, Tato Kastareja, Wasis Riyanto, Widiatmoko, Witono Gendero, Yarli Tambunan, Yulius Benardi, Zamrud Setya N, Anggar Prasetyo, Bhacoxs, Dunadi, Hudi Alfa, Irvin Domi, Kartika Affandi, Lenny Weichert, Ostheo Andre.</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-ticket-fill"></i>
+            Reservasi/Informasi</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <section id="detail-badai-pasti-berlalu" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/koleksi/luk_Badai-Pasti-Berlalu-Affandi.jpg" class="img-fluid rounded" alt="Detail Lukisan Raja Ampat">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Detail Karya: Badai Pasti Berlalu</h3>
+          <p class="text-muted"><strong>Seniman:</strong> Affandi</p>
+          <hr>
+          <p class="text-secondary">Makna dari lukisan Affandi yang berjudul "Badai Pasti Berlalu ini" mengisahkan perjuangan manusia yang sedang mengarungi samudera luas untuk mencapai suatu tempat yang akan dituju, sebagaimana manusia dalam hidup ini terus berjuang untuk mencapai tujuan yang diharapkan. dan dalam perjalanan tersebut banyak sekali rintangan, mulai dari ombak badai yang kecil hingga besar, namun setelah ombak dan badai berlalu, secercah matahari memberikan sinarnya, membawa mereka hingga suatu tempat tujuan yang mereka inginkan. </p>
+          <p class="text-secondary"><strong>Teknik:</strong> Cat Minyak di atas Kanvas</p>
+          <p class="text-secondary"><strong>Ukuran:</strong> 137 x 92 cm</p>
+          <p class="text-secondary"><strong>Tahun:</strong> 1971</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-cart-fill"></i> Tanya/Beli Karya
+            Ini</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <section id="detail-tenun-endek-sutra-mastuli" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/koleksi/tenunEndekSutraMastuli.jpg" class="img-fluid rounded" alt="Detail Tenun Endek Sutra Mastuli">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Detail Karya: Tenun Endek Sutra Mastuli</h3>
+          <p class="text-muted"><strong>Seniman:</strong> Putu  Rika Mahardika</p>
+          <hr>
+          <p class="text-secondary">Tenun Endek Mastuli adalah kain tenun ikat khas Bali yang berasal dari Desa Kalianget, Kecamatan Seririt, Kabupaten Buleleng. Kain ini ditenun menggunakan benang sutra asli tanpa campuran, menjadikannya lebih ringan, halus, dan mengkilap dibandingkan endek berbahan katun atau poliester. Menjadi warisan leluhur, tenun Endek Mastuli tidak hanya berfungsi sebagai produk kerajinan, tetapi juga memiliki nilai sakral dan budaya bagi masyarakat setempat. Dikenal karena kualitas dan keunikan motifnya, kain ini telah menjadi identitas budaya Desa Kalianget dan memiliki nilai jual tinggi karena proses pembuatannya yang masih menggunakan teknik tenun ikat tradisional.</p>
+          <p>Endek Mastuli merupakan kain tenun ikat khas Desa Kalianget,  yang dibuat menggunakan benang sutera asli (benang Mastuli) dan pewarna sintetis jenis basis dye. Proses pembuatannya melibatkan berbagai alat tradisional seperti ATBM (Alat Tenun Bukan Mesin), pengeliingan, palet, alat catri (untuk pencatrian), penamplikan, gegirik, pemapalan, pengeboman lungsin, dan penyucukan. Keahlian para perajin lokal dalam mengolah alat dan bahan ini menghasilkan motif-motif khas yang menjadi ciri Endek Mastuli, antara lain motif keplok/ceplok, motif dobol, motif penyu, motif cegcegan, motif garis jumputan, motif pinggiran, motif dobol endek, motif pelangi, dan motif pot sungenge. Setiap motif memiliki keunikan tersendiri yang memperkaya nilai seni dan budaya dari kain tenun ini. Endek Mastuli tidak hanya menjadi simbol kearifan lokal, tetapi juga potensi unggulan Desa Kalianget yang patut dikenalkan lebih luas.</p>
+          <p class="text-secondary"><strong>Teknik:</strong> Tenun Tangan Tradisional</p>
+          <p class="text-secondary"><strong>Bahan:</strong> Sutra Asli</p>
+          <p class="text-secondary"><strong>Ukuran:</strong> 2.2m X 1.1m</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-cart-fill"></i> Tanya/Beli Karya
+            Ini</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <section id="detail-ukiran-asmat" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/koleksi/seniPatung_Asmat.jpg" class="img-fluid rounded" alt="Detail Patung Ukir Asmat">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Detail Karya: Jiwa Ukiran Asmat</h3>
+          <p class="text-muted"><strong>Seniman:</strong> Yohanes Pame</p>
+          <hr>
+          <p class="text-secondary">Patung Asmat merupakan contoh seni daerah murni yang berasal dari provinsi Papua, Indonesia. Pembuatan patung ini memerlukan keahlian khusus dalam pengukiran kayu. Setiap detail pahatan menceritakan kisah leluhur dan hubungan mendalam dengan
+          alam. Patung ini tidak hanya sebuah objek seni, tetapi juga sebuah jembatan ke dalam kepercayaan dan tradisi
+          masyarakat Asmat yang kaya.</p>
+          <p>Patung Asmat memiliki kelebihan tersendiri, seperti keindahan, kreativitas, dan nilai sejarah yang tinggi. Namun, patung ini juga memiliki kekurangan, seperti rentan terhadap kerusakan dan harga yang mahal. Meskipun demikian, patung Asmat tetap menjadi salah satu kekayaan budaya Indonesia yang patut untuk dijaga dan dipromosikan kepada dunia. Mari lestarikan dan hargai seni budaya Indonesia. Tinggi 70 cm, terbuat dari kayu pilihan.</p>
+          <p class="text-secondary"><strong>Teknik:</strong> Ukiran Kayu Tradisional</p>
+          <p class="text-secondary"><strong>Bahan:</strong> Kayu Ulin</p>
+          <p class="text-secondary"><strong>Ukuran:</strong> Tinggi 70 cm</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-cart-fill"></i> Tanya/Beli Karya
+            Ini</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <section id="detail-lukisan-Berburu-Rusa-Raden-Saleh" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/koleksi/luk_Berburu-Rusa-karya-Raden-Saleh.jpg" class="img-fluid rounded" alt="Detail Lukisan Hiruk Pikuk Pasar">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Detail Karya: Berburu Rusa</h3>
+          <p class="text-muted"><strong>Seniman:</strong> Affandi</p>
+          <hr>
+          <p class="text-secondary">Lukisan yang juga disebut sebagai "Wild Bull Hunt" atau "La Chasse au Taureau Sauvage" ini merupakan salah satu karya Raden Saleh yang sangat terkenal. Karya ini terjual pada suatu kegiatan lelang di Vannes, Prancis, pada 27 Januari 2018. Dilansir dari Indonesia Expat, lukisan ini dihargai sekitar 7.2 miliar Euro atau sekitar 8.8 miliar dolar USD. Seperti karya Raden Saleh pada umumnya, lukisan berdimensi 110 x 180 sentimeter ini memiliki tema perburuan yang memperlihatkan konflik antara manusia dan hewan yang liar dan dramatis.</p> <p>Lukisan ini dinilai unik karena melibatkan self-potrait di mana Saleh melukiskan dirinya sendiri di atas kuda cokelat yang gagah. Lukisan dengan media oil painting ini merupakan pesanan dari seorang pedagang gula dan kopi di abad ke-19 bernama Jules Stanislas Sigisbert Cezart. Karya ini kemudian dijual dan diwariskan ke beberapa generasi, hingga kemudian ditemukan kembali di rumah seorang warga Prancis pada Agustus 2017. Lukisan ini terakhir dimiliki oleh kolektor seni anonim dari Indonesia yang menawarkan harga tertinggi pada kegiatan lelang di Vannes, Prancis.</p>
+          <p class="text-secondary"><strong>Teknik:</strong> Akrilik di atas Kanvas</p>
+          <p class="text-secondary"><strong>Ukuran:</strong> 60 x 80 cm</p>
+          <p class="text-secondary"><strong>Tahun:</strong> 2022</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-cart-fill"></i> Tanya/Beli Karya
+            Ini</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <section id="detail-wayang-arjuna" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/koleksi/wayangArjuna.jpg" class="img-fluid rounded" alt="Detail Wayang Kulit Arjuna">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Detail Karya: Kharisma Wayang Arjuna</h3>
+          <p class="text-muted"><strong>Seniman:</strong> Dalang Agung</p>
+          <hr>
+          <p class="text-secondary">Wayang kulit Arjuna ini adalah contoh sempurna dari seni tradisional Jawa yang
+            dihidupkan oleh Dalang Agung. Dibuat dengan kulit kerbau pilihan dan dipahat serta diwarnai secara detail,
+            setiap garis dan warna memiliki makna filosofis. Arjuna melambangkan ketampanan, kesetiaan, dan keberanian.
+            Ideal sebagai koleksi seni budaya atau elemen dekoratif yang otentik. Tinggi 80 cm.</p>
+          <p class="text-secondary"><strong>Teknik:</strong> Ukir Kulit, Pewarnaan Tradisional</p>
+          <p class="text-secondary"><strong>Bahan:</strong> Kulit Kerbau</p>
+          <p class="text-secondary"><strong>Ukuran:</strong> Tinggi 80 cm</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-cart-fill"></i> Tanya/Beli Karya
+            Ini</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <section id="detail-topeng-sidakarya" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/koleksi/topengSidakarya.jpg" class="img-fluid rounded" alt="Detail Topeng Sidakarya">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Detail Karya: Misteri Topeng Sidakarya</h3>
+          <p class="text-muted"><strong>Seniman:</strong> I Nyoman Kerta</p>
+          <hr>
+          <p class="text-secondary">Topeng Sidakarya adalah salah satu topeng sakral dalam upacara keagamaan di Bali,
+            dibuat dengan penuh dedikasi oleh I Nyoman Kerta. Topeng ini melambangkan penyelesaian dan kesempurnaan
+            upacara. Dengan detail pahatan yang ekspresif dan warna yang kaya, topeng ini memancarkan aura mistis dan
+            keagungan. Sebuah karya seni yang sarat makna budaya dan spiritual. Tinggi 30 cm.</p>
+          <p class="text-secondary"><strong>Teknik:</strong> Ukiran Kayu, Pewarnaan</p>
+          <p class="text-secondary"><strong>Bahan:</strong> Kayu Pule</p>
+          <p class="text-secondary"><strong>Ukuran:</strong> Tinggi 30 cm</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-cart-fill"></i> Tanya/Beli Karya
+            Ini</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <section id="detail-gerabah-kuno" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/koleksi/gerabah_Kriya.jpg" class="img-fluid rounded" alt="Detail Gerabah Tanah Liat Kuno">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Detail Karya: Gerabah Tanah Liat Kuno</h3>
+          <p class="text-muted"><strong>Seniman:</strong> Pengrajin Anonim (Gaya Tradisional)</p>
+          <hr>
+          <p class="text-secondary">Gerabah ini adalah replika yang cermat dari artefak tanah liat kuno yang ditemukan
+            di situs-situs arkeologi Nusantara. Dibuat dengan teknik pembakaran tradisional, gerabah ini tidak hanya
+            berfungsi sebagai benda dekoratif, tetapi juga sebagai pengingat akan keahlian nenek moyang kita dalam
+            mengolah alam. Bentuknya yang sederhana namun elegan, cocok untuk menambah sentuhan historis pada interior
+            modern. Diameter 25 cm, tinggi 30 cm.</p>
+          <p class="text-secondary"><strong>Teknik:</strong> Pembakaran Tanah Liat Tradisional</p>
+          <p class="text-secondary"><strong>Bahan:</strong> Tanah Liat Pilihan</p>
+          <p class="text-secondary"><strong>Ukuran:</strong> Diameter 25 cm, Tinggi 30 cm</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-cart-fill"></i> Tanya/Beli Karya
+            Ini</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <section id="detail-naga-sanga-amurwabhumi" class="py-5 mt-5 bg-light rounded shadow-sm detail-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/koleksi/nagaSangaAmurwabhumi.jpg" class="img-fluid rounded" alt="Detail Ukiran Naga Emas">
+        </div>
+        <div class="col-md-6">
+          <h3 class="section-title-small text-dark">Detail Karya: Patung Naga Sanga Amurwabhumi</h3>
+          <p class="text-muted"><strong>Seniman:</strong>  I Nyoman Eriawan</p>
+          <hr>
+          <p class="text-secondary">Selain indah, “The Masterpiece Naga Sanga Amurwa Bhumi” memecahkan rekor MURI (Museum Rekor Indonesia) sebagai patung perak terbesar dan terberat di Indonesia, sekaligus sebagai patung terberat di dunia dengan berat 720 kg. Hasil karya spektakuler tersebut, dibuat dan digagas oleh I Nyoman Eriawan. Waktu pembuatan patung ini lebih dari 5 tahun yang diselesaikan pada tanggal 21 September 2018.</p>
+          <p>Patung naga ini memiliki sembilan kepala yang saling berhubungan. Jumlah sembilan kepala itu bukan sekadar angka atau semata sebagai karya seni saja. Tetapi juga ada nilai filosofi di dalamnya. Masyarakat Hindu memercayai angka sembilan sebagai pengider-ider atau sembilan arah mata angin, yang mencerminkan sebuah kebersamaan di dalam kehidupan.</p>
+          <p class="text-secondary"><strong>Teknik:</strong> Ukiran Kayu, Pelapisan Emas</p>
+          <p class="text-secondary"><strong>Bahan:</strong> Perak Murni</p>
+          <p class="text-secondary"><strong>Ukuran:</strong> Panjang 20m, berat 720 kg</p>
+          <a href="kontak.html" class="btn btn-primary-custom mt-3"><i class="bi bi-cart-fill"></i> Tanya/Beli Karya
+            Ini</a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#top-of-page-collection" class="btn btn-outline-secondary smooth-scroll-btn"><i
+            class="bi bi-arrow-up-circle"></i> Kembali ke Atas Koleksi</a>
+      </div>
+    </section>
+    <h2 class="section-title mt-5">Temui Para Seniman Kami!</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card text-white overflow-hidden" style="
+                    border-radius: 15px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    ">
+          <img src="img/koleksi/seniman.jpg" class="card-img" alt="Potret Seniman"
+            style="height: 350px; object-fit: cover" />
+          <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center"
+            style="background-color: rgba(0, 0, 0, 0.55); border-radius: 15px">
+            <h3 class="card-title text-center" style="
+                        font-family: 'Playfair Display', serif;
+                        font-weight: 700;
+                        font-size: 2.5rem;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+                        ">
+              Kenali Dalang di Balik Karya
+            </h3>
+            <p class="card-text text-center lead mb-4" style="font-family: 'Merriweather', serif">
+              Dapatkan inspirasi dari kisah dan dedikasi para seniman hebat
+              Nusantara.
+            </p>
+            <a href="seniman.html" class="btn btn-lg btn-light" style="
+                        background-color: #d2b48c;
+                        border-color: #d2b48c;
+                        color: #8b4513;
+                        font-weight: bold;
+                        padding: 12px 30px;
+                        border-radius: 50px;
+                        transition: all 0.3s ease;
+                        ">Profil Seniman <i class="bi bi-person-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-dark text-center text-lg-start mt-5 py-4">
+    <div class="container p-4">
+      <div class="text-center text-light">
+        © 2025 Galeri Seni Nusantara. Hak Cipta Dilindungi.
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
